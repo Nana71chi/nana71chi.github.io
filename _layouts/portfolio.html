@@ -11,7 +11,8 @@
   <meta name="description" content="{{ page.description | default: '七一的个人站，设有摄影、绘图、视频、项目和文章归档。' | escape }}">
   <link rel="canonical" href="{{ page.url | absolute_url }}">
   <link rel="icon" href="{{ '/favicon.ico' | relative_url }}">
-  <link rel="stylesheet" href="{{ '/assets/portfolio/site.css' | relative_url }}">
+  <script src="{{ '/assets/portfolio/theme.js' | relative_url }}"></script>
+  <link rel="stylesheet" href="{{ '/assets/portfolio/site.css' | relative_url }}?v=chic">
 </head>
 <body{% if page.home %} class="home"{% endif %}>
   <a class="skip-link" href="#main">跳到正文</a>
@@ -25,6 +26,9 @@
       <a href="{{ '/archives/' | relative_url }}"{% if page.section == 'archives' %} aria-current="page"{% endif %}>文章</a>
       <a href="{{ '/about-me/' | relative_url }}"{% if page.section == 'about' %} aria-current="page"{% endif %}>关于</a>
     </nav>
+    <button class="theme-switch" type="button" role="switch" aria-label="深色模式" aria-checked="false" title="切换黑／白主题" hidden>
+      <span class="theme-track" aria-hidden="true"></span>
+    </button>
   </header>
   {{ content }}
 </body>
