@@ -8,7 +8,7 @@
   {% else %}
   <title>{{ page.title | escape }} | {{ site.title | escape }}</title>
   {% endif %}
-  <meta name="description" content="{{ page.description | default: '这里收录七一的游戏策划项目和旧文章。' | escape }}">
+  <meta name="description" content="{{ page.description | default: '七一的个人站，设有摄影、绘图、项目和文章归档。' | escape }}">
   <link rel="canonical" href="{{ page.url | absolute_url }}">
   <link rel="icon" href="{{ '/favicon.ico' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/portfolio/site.css' | relative_url }}">
@@ -18,7 +18,9 @@
   <header class="site-header">
     <a class="site-name" href="{{ '/' | relative_url }}"{% if page.home %} aria-current="page"{% endif %}>{{ site.title | escape }}</a>
     <nav class="navigation" aria-label="主导航">
-      <a href="{{ '/projects/' | relative_url }}"{% if page.section == 'projects' %} aria-current="{% if page.collection %}location{% else %}page{% endif %}"{% endif %}>项目</a>
+      <a href="{{ '/photography/' | relative_url }}"{% if page.section == 'photography' %} aria-current="page"{% endif %}>摄影</a>
+      <a href="{{ '/drawing/' | relative_url }}"{% if page.section == 'drawing' %} aria-current="page"{% endif %}>绘图</a>
+      <a href="{{ '/projects/' | relative_url }}"{% if page.section == 'projects' %} aria-current="{% if page.url == '/projects/' %}page{% else %}location{% endif %}"{% endif %}>项目</a>
       <a href="{{ '/archives/' | relative_url }}"{% if page.section == 'archives' %} aria-current="page"{% endif %}>文章</a>
       <a href="{{ '/about-me/' | relative_url }}"{% if page.section == 'about' %} aria-current="page"{% endif %}>关于</a>
     </nav>

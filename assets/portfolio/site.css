@@ -95,10 +95,10 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 .prose img { display: block; height: auto; }
 
 @media (max-width: 35rem) {
-  .site-header { min-height: 4rem; padding-inline: 1.15rem; }
+  .site-header { align-items: flex-start; flex-direction: column; gap: .15rem; padding: .75rem 1.15rem .35rem; }
   .site-name { font-size: .875rem; letter-spacing: 0; }
-  .navigation { gap: .9rem; }
-  .navigation a { font-size: .875rem; }
+  .navigation { flex-wrap: wrap; gap: 0 .9rem; }
+  .navigation a { display: inline-flex; align-items: center; min-height: 2.75rem; font-size: .875rem; }
   .entry-heading { flex-wrap: wrap; }
 }
 

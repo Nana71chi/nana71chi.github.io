@@ -2,20 +2,14 @@
 layout: portfolio
 section: projects
 title: 项目
-description: 游戏策划项目案例，涵盖生存搜打撤、儿童装扮和休闲解压。
+description: 个人项目与公司项目。
 ---
 <main id="main" class="reading">
   <h1>项目</h1>
-  <ul class="entry-list">
-    {% assign projects = site.projects | sort: 'period' | reverse %}
-    {% for project in projects %}
-    <li>
-      <div class="entry-heading">
-        <h2><a href="{{ project.url | relative_url }}">{{ project.title | escape }}</a></h2>
-        <span class="date">{{ project.period | escape }}</span>
-      </div>
-      <p>{{ project.description | escape }}</p>
-    </li>
-    {% endfor %}
-  </ul>
+  <nav aria-label="项目分类">
+    <ul class="entry-list">
+      <li class="entry-heading"><a href="{{ '/projects/personal/' | relative_url }}">个人项目</a></li>
+      <li class="entry-heading"><a href="{{ '/projects/company/' | relative_url }}">公司项目</a></li>
+    </ul>
+  </nav>
 </main>
