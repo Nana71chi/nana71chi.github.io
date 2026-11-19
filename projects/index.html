@@ -1,0 +1,21 @@
+---
+layout: portfolio
+section: projects
+title: 项目
+description: 游戏策划项目案例，涵盖生存搜打撤、儿童装扮和休闲解压。
+---
+<main id="main" class="reading">
+  <h1>项目</h1>
+  <ul class="entry-list">
+    {% assign projects = site.projects | sort: 'period' | reverse %}
+    {% for project in projects %}
+    <li>
+      <div class="entry-heading">
+        <h2><a href="{{ project.url | relative_url }}">{{ project.title | escape }}</a></h2>
+        <span class="date">{{ project.period | escape }}</span>
+      </div>
+      <p>{{ project.description | escape }}</p>
+    </li>
+    {% endfor %}
+  </ul>
+</main>

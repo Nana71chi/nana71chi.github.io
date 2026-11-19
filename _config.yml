@@ -1,0 +1,20 @@
+title: 隐匿于市的小空间
+url: https://nana71chi.github.io
+lang: zh-CN
+markdown: kramdown
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: case
+      section: projects
+
+exclude:
+  - README.md

@@ -1,0 +1,16 @@
+---
+layout: portfolio
+---
+<main class="reading" id="main">
+  <a class="back-link" href="{{ '/projects/' | relative_url }}">全部项目</a>
+  <article class="case">
+    <header class="case-header">
+      <p class="case-meta"><span>{{ page.category | escape }}</span><span>{{ page.period | escape }}</span></p>
+      <h1>{{ page.title | escape }}</h1>
+      <p class="standfirst">{{ page.description | escape }}</p>
+    </header>
+    <div class="prose">
+      {{ content }}
+    </div>
+  </article>
+</main>
