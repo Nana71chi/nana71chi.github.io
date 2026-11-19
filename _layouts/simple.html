@@ -2,6 +2,9 @@
 layout: portfolio
 ---
 <main id="main" class="reading">
+  {% if page.back_path %}
+  <a class="back-link" href="{{ page.back_path | relative_url }}" aria-label="返回项目分类">返回</a>
+  {% endif %}
   <h1>{{ page.title | escape }}</h1>
   <div class="prose about">
     {{ content }}

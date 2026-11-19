@@ -10,4 +10,6 @@
 
 摄影、绘图、个人项目和公司项目的页面分别是 `photography/index.md`、`drawing/index.md`、`projects/personal/index.md` 和 `projects/company/index.md`。
 
+游戏视频记录更新在 `videos/index.md`。加入第一条时可以删去「暂无游戏视频记录」，再用 Markdown 添加标题、日期和视频链接。
+
 首页在 `index.html`。公开页面使用昵称「七一」，添加文章时只填写愿意公开的项目内容。旧文章、旧关于页和按年、月的归档仍在原路径下。
