@@ -49,14 +49,18 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 .home { display: grid; min-height: 100svh; grid-template-rows: auto 1fr; }
 .home-main { display: grid; place-items: center; padding: 2.5rem 1.25rem clamp(4rem, 16vh, 9rem); text-align: center; }
 .avatar {
-  display: block;
+  display: grid;
+  place-items: center;
   width: clamp(7rem, 16vw, 8.25rem);
-  height: auto;
   aspect-ratio: 1;
-  object-fit: cover;
   margin-inline: auto;
   border: 1px solid var(--line);
   border-radius: 50%;
+  background: var(--line);
+  color: var(--accent);
+  font-size: clamp(2.5rem, 6vw, 3.4rem);
+  font-weight: 600;
+  line-height: 1;
 }
 .profile h1 { margin: 1.35rem 0 .35rem; font-size: clamp(2rem, 5.2vw, 2.7rem); font-weight: 700; letter-spacing: .065em; line-height: 1.25; }
 .profile p { margin: 0; color: var(--muted); font-size: 1rem; letter-spacing: .055em; }
