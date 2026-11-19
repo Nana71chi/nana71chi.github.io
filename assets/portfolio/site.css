@@ -7,7 +7,7 @@
   --accent: #2d96bd;
   --post-link: #2d96bd;
   --post-link-hover: #ef3982;
-  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei UI", "Noto Sans CJK SC", system-ui, sans-serif;
+  font-family: var(--site-font-stack, "PingFang SC", "Microsoft YaHei UI", system-ui, sans-serif);
   color: var(--ink);
   background: var(--paper);
   line-height: 1.7;
@@ -99,8 +99,22 @@ a:focus-visible, .theme-switch:focus-visible { outline: 2px solid var(--accent);
   font-weight: 600;
   line-height: 1;
 }
-.profile h1 { margin: 1.35rem 0 .35rem; font-size: clamp(2rem, 5.2vw, 2.7rem); font-weight: 700; letter-spacing: .065em; line-height: 1.25; }
-.profile p { margin: 0; font-size: 1rem; letter-spacing: .055em; }
+.profile h1 {
+  margin: 1.35rem 0 .6rem;
+  font-size: clamp(2.25rem, 6vw, 2.9rem);
+  font-weight: 400;
+  letter-spacing: .1em;
+  text-indent: .1em;
+  line-height: 1.25;
+}
+.profile p {
+  margin: 0;
+  color: color-mix(in srgb, var(--ink) 89%, var(--paper));
+  font-size: .875rem;
+  font-weight: 400;
+  letter-spacing: .1em;
+  text-indent: .1em;
+}
 .profile-link { display: inline-flex; align-items: center; min-height: 2.75rem; margin-top: .85rem; color: var(--post-link); font-size: .9375rem; }
 
 .reading { width: min(100% - 2.75rem, 42.5rem); margin: clamp(2.5rem, 7vw, 5.5rem) auto 5rem; }
