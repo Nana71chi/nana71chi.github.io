@@ -68,6 +68,26 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 
 .reading { width: min(100% - 2.75rem, 42.5rem); margin: clamp(2.5rem, 7vw, 5.5rem) auto 5rem; }
 .reading h1 { margin: 0; font-size: clamp(1.85rem, 5.5vw, 2.6rem); letter-spacing: -.025em; line-height: 1.35; }
+.project-sections {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(.65rem, 3vw, 1.25rem);
+  margin: 1.75rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.project-sections a {
+  display: grid;
+  place-items: center;
+  min-height: clamp(4.25rem, 9vw, 6.25rem);
+  padding: .6rem;
+  border: 1px solid var(--line);
+  border-radius: .25rem;
+  font-size: clamp(.9375rem, 3.5vw, 1.125rem);
+  text-align: center;
+  text-decoration: none;
+}
+.project-sections a:hover { border-color: var(--accent); color: var(--accent); text-decoration: underline; }
 .entry-list { margin: 1.75rem 0 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
 .entry-list li { padding: 1.18rem 0; border-bottom: 1px solid var(--line); }
 .entry-heading { display: flex; align-items: baseline; justify-content: space-between; gap: .15rem 1.5rem; }
